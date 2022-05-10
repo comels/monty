@@ -8,28 +8,34 @@
 
 int main(int argc, char **argv)
 {
-	FILE *ptr;
-	char **lines;
-	char **tab_tokens;
-	int i = 0;
+	FILE *ptr = fopen(argv[1], "r");
+	char *line = NULL, *token = NULL;
+	size_t size = 0;
+	stack_t **stack = NULL;
+	unsigned int line_number = 0;
 
-	if(argc != 2)
+	if (argc != 2)
 	{
 		perror("USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	ptr = fopen(argv[1], "r");
 
-	if (!ptr)
+	if (ptr == NULL)
 	{
-		fprintf(2, "Error: Can't open file %s\n", argv[1]);
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-
-	lines = _read(ptr);
-
-	while (lines[i])
+	while (getline(&line, &size, ptr) != - 1)
 	{
-		tab_tokens = _tok(lines[i]); // push 1  pall 3
+		line_number++;
+		token = strtok(line, " ");
+		if (strcmp(token, "push") == 0)
+		{
+			token = strtok(NULL, " ");
+			_push(token, stack, line_number);
+		}
+		else
+			get_op_func(token, stack, line_number);
 	}
+	return (EXIT_SUCCESS);
 }
