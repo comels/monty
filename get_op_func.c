@@ -23,7 +23,7 @@ int get_op_func(char *line, stack_t **stack, unsigned int line_number)
 		if (strcmp(line, func[i].opcode) == 0)
 		{
 			func[i].f(stack, line_number);
-			exit(EXIT_SUCCESS);
+			return (EXIT_SUCCESS);
 		}
 		i++;
 	}

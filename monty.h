@@ -1,15 +1,16 @@
 #ifndef __MONTY__
 #define __MONTY__
 
-#include <unistd.h>
+#define _GNU_SOURCE
+
+#include <stdio.h>
 #include <string.h>
-#include <sys/wait.h>
+#include <stddef.h>
+#include <stdlib.h>
+#include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <errno.h>
-#include <signal.h>
+#include <fcntl.h>
 #include <ctype.h>
 
 /**
@@ -42,8 +43,6 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-void push(stack_t**, unsigned int line_number);
-void pall(stack_t**, unsigned int line_number);
 int get_op_func(char *line, stack_t **stack, unsigned int line_number);
 void _add(stack_t **stack, unsigned int line_number);
 void _nop(stack_t **stack, unsigned int line_number);

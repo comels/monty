@@ -12,14 +12,14 @@ void _push(char *token, stack_t **stack, unsigned int line_number)
 
 	if (token == NULL)
 	{
-		fprintf(stderr, "L%d: usage: push integer\n", line_number);
+		fprintf(stderr, "1 : L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	for (i = 0; token[i]; i++)
+	for (i = 0; token[i] != '\0'; i++)
 	{
 		if (isdigit(token[i]) == 0)
 		{
-			fprintf(stderr, "L%d: usage: push integer\n", line_number);
+			fprintf(stderr, "2 : L%d: usage: push integer\n", line_number);
 			exit(EXIT_FAILURE);
 		}
 	}
@@ -32,13 +32,12 @@ void _push(char *token, stack_t **stack, unsigned int line_number)
 	}
 	new->n = atoi(token);
 	new->prev = NULL;
+	new->next = NULL;
 
-	if (*stack == NULL)
+	if (*stack)
 	{
-		new->next = NULL;
-		*stack = new;
+		(*stack)->prev = new;
+		new->next = *stack;
 	}
-	(*stack)->prev = new;
-	new->next = *stack;
 	*stack = new;
 }
