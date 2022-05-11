@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while (getline(&line, &size, ptr) != -1)
+	while (getline(&line, &size, ptr) != -1 && error != 1)
 	{
 		line_number++;
 		token = strtok(line, "\n\t ");
