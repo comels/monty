@@ -11,6 +11,9 @@ void _rotl(stack_t **stack, unsigned int line_number)
 	stack_t *new;
 	int num = (*stack)->n;
 
+	if (*stack == NULL)
+		return;
+
 	_pop(stack, line_number);
 
 	temp = *stack;
