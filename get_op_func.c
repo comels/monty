@@ -1,7 +1,9 @@
 #include "monty.h"
 /**
- *main - take file.m input
- *@file: the file monty
+ *get_op_func - give the good function
+ *@line: the line read
+ *@stack: the list
+ *@line_number: the number of the line
  *Return: int (exit succes or failure)
  */
 
@@ -14,6 +16,9 @@ int get_op_func(char *line, stack_t **stack, unsigned int line_number)
 		{"swap", _swap},
 		{"add", _add},
 		{"nop", _nop},
+		{"sub", _sub},
+		{"mul", _mul},
+		{"div", _div},
 		{NULL, NULL},
 	};
 	int i = 0;
@@ -28,5 +33,6 @@ int get_op_func(char *line, stack_t **stack, unsigned int line_number)
 		i++;
 	}
 	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, line);
-	exit(EXIT_FAILURE);
+	error = 1;
+	return (EXIT_FAILURE);
 }

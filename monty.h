@@ -13,6 +13,8 @@
 #include <fcntl.h>
 #include <ctype.h>
 
+
+extern int error;
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -51,5 +53,9 @@ void _pint(stack_t **stack, unsigned int line_number);
 void _pop(stack_t **stack, unsigned int line_number);
 void _push(char *token, stack_t **stack, unsigned int line_number);
 void _swap(stack_t **stack, unsigned int line_number);
+void free_all(stack_t *stack, char *line, FILE *ptr);
+void _sub(stack_t **stack, unsigned int line_number);
+void _mul(stack_t **stack, unsigned int line_number);
+void _div(stack_t **stack, unsigned int line_number);
 
 #endif

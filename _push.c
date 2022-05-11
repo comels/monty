@@ -1,8 +1,9 @@
 #include "monty.h"
 /**
- * _push - function that ...
- * @stack: pointer of a list ???
- * @line_number: int ???
+ * _push - function that add a node
+ * @stack: list
+ * @line_number: line of the program
+ * @token: the number to add in the node
  */
 
 void _push(char *token, stack_t **stack, unsigned int line_number)
@@ -12,15 +13,19 @@ void _push(char *token, stack_t **stack, unsigned int line_number)
 
 	if (token == NULL)
 	{
-		fprintf(stderr, "1 : L%d: usage: push integer\n", line_number);
-		exit(EXIT_FAILURE);
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
+		error = 1;
+		return;
 	}
 	for (i = 0; token[i] != '\0'; i++)
 	{
+		if (token[i] == '-')
+			i++;
 		if (isdigit(token[i]) == 0)
 		{
-			fprintf(stderr, "2 : L%d: usage: push integer\n", line_number);
-			exit(EXIT_FAILURE);
+			fprintf(stderr, "L%d: usage: push integer\n", line_number);
+			error = 1;
+			return;
 		}
 	}
 	new = malloc(sizeof(stack_t));
@@ -28,7 +33,8 @@ void _push(char *token, stack_t **stack, unsigned int line_number)
 	if (new == NULL)
 	{
 		perror("Error: malloc failed\n");
-		exit(EXIT_FAILURE);
+		error = 1;
+		return;
 	}
 	new->n = atoi(token);
 	new->prev = NULL;
