@@ -1,7 +1,5 @@
 #include "monty.h"
 
-int error = 0;
-
 /**
  *main - take file.m input
  *@argv: tab of arguments

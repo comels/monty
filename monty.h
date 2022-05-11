@@ -14,7 +14,7 @@
 #include <ctype.h>
 
 
-extern int error;
+extern int error = 0;
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
