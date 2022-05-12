@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ## Description
 
 ### Team Project to practice implementation of stacks and queques by building an interpreter for the monty scripting language.
@@ -8,20 +8,6 @@
 ## Table of Contents :open_file_folder:
 
 * [monty](./main.)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### Authors C.Le Sauter - G.Coudrin - S.Badyine  for Holberton School Paris
  
@@ -138,8 +124,6 @@ File Name | Description :
         $ gcc -Wall -Werror -Wextra -pedantic -std=c90 *.c -o monty
 
 ---
-This is the project of Holberton Paris school by<br>
-Grégoire Coudrin<br>
-Siham Badyine<br>
-Côme Le Sauter<br>
->>>>>>> 7a988d7ad3399e4d702676292722297dd6821d3a
+
+
+
