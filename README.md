@@ -8,7 +8,7 @@
 ## Table of Contents :open_file_folder:
 
 * [main](./main.c)
-* [monty](./monty)
+* [monty file](./monty)
 * [header file](./monty.h)
 * [wich function](./get_op_func.c)
 * [add-adds the 2 first nodes](./_add.c)
