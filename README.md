@@ -42,8 +42,7 @@ List of monty operations this interpreted understands:
 - `pchar`: prints the char at the top of the stack, followed by a new line
 - `pstr`: prints the string starting at the top of the stack, followed by a new line
 - `rotr`:  rotates the stack to the bottom
-- `stack`: sets the format of the data to a stack (LIFO)
-- `queue`: sets the format of the data to a queue (FIFO)
+- `rotl`: opcode rotate the stack to the top
 ---
 
 File Name | Description :
@@ -63,9 +62,7 @@ File Name | Description :
 `_pchar.c` | opcode print the char at the top of the stack, followed by a new line
 `_pstr.c` | opcode print the string starting at the top of the stack, followed by a new line
 `_rotr.c` | opcode rotate the stack to the bottom
-`_stack.c` | opcode set the format of the data to a stack (LIFO)
-`_queue.c` | opcode set the format of the data to a queue (FIFO)
-`README.md` | README for the monty project
+`_rotl.c` | opcode rotate the stack to the top
 ---
 **General :**<br>
     What do LIFO and FIFO mean?<br>
