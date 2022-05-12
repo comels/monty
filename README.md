@@ -11,7 +11,7 @@
 
 ### Authors C.Le Sauter - G.Coudrin - S.Badyine  for Holberton School Paris
  
-=======
+---
 ## Monty
 
 **The Monty language :**
