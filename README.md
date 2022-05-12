@@ -14,7 +14,7 @@
 * [add-adds the 2 first nodes](./_add.c)
 * [push -adds a node](./_push.c)
 * [modulo -computes the rest of the division](./_mod.c)
-* [multiplies the second element with the top elemen](./_mul.c)
+* [multiplies the second element with the top element](./_mul.c)
 * [nop "do nothing"](./_nop.c)
 * [pop  deletes the first node](./_pop.c)
 * [pall prints all the list](./_pall.c)
