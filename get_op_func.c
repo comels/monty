@@ -4,7 +4,7 @@
  *@line: the line read
  *@stack: the list
  *@line_number: the number of the line
- *Return: int (exit succes or failure)
+ *Return: EXIT_SUCCESS or EXIT_FAILURE
  */
 
 int get_op_func(char *line, stack_t **stack, unsigned int line_number)
@@ -23,6 +23,7 @@ int get_op_func(char *line, stack_t **stack, unsigned int line_number)
 		{"pchar", _pchar},
 		{"pstr", _pstr},
 		{"rotl", _rotl},
+		{"rotr", _rotr},
 		{NULL, NULL},
 	};
 	int i = 0;
@@ -32,19 +33,15 @@ int get_op_func(char *line, stack_t **stack, unsigned int line_number)
 		if (line[i] == ' ')
 			continue;
 		if (line[i] == '#')
-		{
 			return (EXIT_SUCCESS);
-		}
 	}
-	i = 0;
-	while (func[i].opcode)
+	for (i = 0; func[i].opcode != NULL; i++)
 	{
 		if (strcmp(line, func[i].opcode) == 0)
 		{
 			func[i].f(stack, line_number);
 			return (EXIT_SUCCESS);
 		}
-		i++;
 	}
 	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, line);
 	error = 1;

@@ -2,10 +2,10 @@
 
 int error = 0;
 /**
- *main - take file.m input
+ *main - the main fonction
  *@argv: tab of arguments
  *@argc: number of arguments
- *Return: int (exit succes or failure)
+ *Return: EXIT_FAILURE or EXIT_SUCCESS
  */
 
 int main(int argc, char **argv)

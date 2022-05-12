@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * _pstr - function that print a char
+ * _pstr - function that print a string
  * @stack: the list
- * @line_number: the number of line
+ * @line_number: number of line of the command
  */
 
 void _pstr(stack_t **stack, unsigned int line_number)

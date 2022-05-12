@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * _add - function that ...
- * @stack: pointer of a list ???
- * @line_number: int ???
+ * _add - function that add the 2 first node
+ * @stack: the list
+ * @line_number: number of line of the command
  */
 
 void _add(stack_t **stack, unsigned int line_number)

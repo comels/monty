@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * _swap - function that ...
- * @stack: pointer of a list ???
- * @line_number: int ???
+ * _swap - function that swaps the top two elements
+ * @stack: the list
+ * @line_number: the number to add in the node
  */
 
 void _swap(stack_t **stack, unsigned int line_number)

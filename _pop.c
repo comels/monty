@@ -2,7 +2,7 @@
 /**
  * _pop - function that delete the first node
  * @stack: the list
- * @line_number: the line number
+ * @line_number: number of line of the command
  */
 
 void _pop(stack_t **stack, unsigned int line_number)

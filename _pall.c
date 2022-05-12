@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
  * _pall - function that print all the list
- * @stack: the list to print
- * @line_number: line
+ * @stack: the list
+ * @line_number: number of line of the command
  */
 
 void _pall(stack_t **stack, unsigned int line_number)

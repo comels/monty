@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * _div - function that ...
- * @stack: pointer of a list ???
- * @line_number: int ???
+ * _div - function that divides the second element by the top element
+ * @stack: the list
+ * @line_number: number of line of the command
  */
 
 void _div(stack_t **stack, unsigned int line_number)

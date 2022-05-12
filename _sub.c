@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * _sub - function that ...
- * @stack: pointer of a list ???
- * @line_number: int ???
+ * _sub - function that subtracts the top element from the second element
+ * @stack: the list
+ * @line_number: the number to add in the node
  */
 
 void _sub(stack_t **stack, unsigned int line_number)

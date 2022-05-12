@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * _rotl - function that ...
+ * _rotl - function that rotates the stack to the top
  * @stack: the list
- * @line_number: the number of line
+ * @line_number: the number to add in the node
  */
 
 void _rotl(stack_t **stack, unsigned int line_number)

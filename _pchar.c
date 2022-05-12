@@ -2,7 +2,7 @@
 /**
  * _pchar - function that print a char
  * @stack: the list
- * @line_number: the number of line
+ * @line_number: number of line of the command
  */
 
 void _pchar(stack_t **stack, unsigned int line_number)

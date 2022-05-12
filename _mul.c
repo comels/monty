@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * _mul - function that ...
- * @stack: pointer of a list ???
- * @line_number: int ???
+ * _mul - function that multiplies the second element with the top element
+ * @stack: the list
+ * @line_number: number of line of the command
  */
 
 void _mul(stack_t **stack, unsigned int line_number)
