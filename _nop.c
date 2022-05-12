@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * _nop - function that ...
- * @stack: pointer of a list ???
- * @line_number: int ???
+ * _nop - function that do nothing
+ * @stack: the list
+ * @line_number: number of line of the command
  */
 
 void _nop(stack_t **stack, unsigned int line_number)

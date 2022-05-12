@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * _pint - function that ...
- * @stack: pointer of a list ???
- * @line_number: int ???
+ * _pint - function that prints the value at the top of the stack
+ * @stack: the list
+ * @line_number: number of line of the command
  */
 
 void _pint(stack_t **stack, unsigned int line_number)

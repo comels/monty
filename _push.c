@@ -2,7 +2,7 @@
 /**
  * _push - function that add a node
  * @stack: list
- * @line_number: line of the program
+ * @line_number: number of line of the command
  * @token: the number to add in the node
  */
 

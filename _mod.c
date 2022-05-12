@@ -1,8 +1,9 @@
 #include "monty.h"
 /**
- * _mod - function that ...
- * @stack: pointer of a list ???
- * @line_number: int ???
+ * _mod - function that computes the rest of the division
+ * of the second element by the top element.
+ * @stack: the list
+ * @line_number: number of line of the command
  */
 
 void _mod(stack_t **stack, unsigned int line_number)
