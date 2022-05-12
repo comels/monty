@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * _nop - function that do nothing
+ * _nop - function that does nothing
  * @stack: the list
  * @line_number: number of line of the command
  */

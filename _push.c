@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * _push - function that add a node
+ * _push - function that adds a node
  * @stack: list
  * @line_number: number of line of the command
  * @token: the number to add in the node

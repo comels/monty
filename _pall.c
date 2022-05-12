@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * _pall - function that print all the list
+ * _pall - function that prints all the list
  * @stack: the list
  * @line_number: number of line of the command
  */

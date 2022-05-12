@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * _add - function that add the 2 first node
+ * _add - function that adds the 2 first nodes
  * @stack: the list
  * @line_number: number of line of the command
  */
