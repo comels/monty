@@ -1,16 +1,33 @@
 
 ## Description
 
-### Team Project to practice implementation of stacks and queques by building an interpreter for the monty scripting language.
+### Team Project to practice implementation of stacks and queues by building an interpreter for the monty scripting language.
 
 
 
 ## Table of Contents :open_file_folder:
 
-* [monty](./main.)
+* [main](./main.c)
+* [monty](./monty)
+* [header file](./monty.h)
+* [wich function](./get_op_func.c)
+* [add-adds the 2 first nodes](./_add.c)
+* [push -adds a node](./_push.c)
+* [modulo -computes the rest of the division](./_mod.c)
+* [multiplies the second element with the top elemen](./_mul.c)
+* [nop "do nothing"](./_nop.c)
+* [pop  delete the first node](./_pop.c)
+* [pall prints all the list](./_pall.c)
+* [prints the value at the top of the stack](./_pint.c)
+* [prints string](./_pstr.c)
+* [rotates to the top](./_rotl.c)
+* [rotates to the bottom ](./main.c)
+* [substracts the top element from the second element](./_sub.c)
+* [swaps the top two elements](./_swap.c)
+* [free](./free.c)
 
-### Authors C.Le Sauter - G.Coudrin - S.Badyine  for Holberton School Paris
- 
+
+
 ---
 ## Monty
 
@@ -18,16 +35,18 @@
 
 Monty is a programming and scripting language. <br>
 This language was designed by David A. Watt. <br>
-This project was about creating a program that read this language.
 
 ---
 
 **Usage :**
 
 - monty file : where file is the path to the file containing Monty byte code<br>
+
 - If the user does not give any file or more than one argument to your program, print the error message USAGE: monty file, followed by a new line, and exit with the status EXIT_FAILURE.<br>
+
 - If, for any reason, it’s not possible to open the file, print the error message Error: Can't open file <file>, followed by a new line, and exit with the status EXIT_FAILURE<br>
   where <file> is the name of the file<br>
+
 - If the file contains an invalid instruction, print the error message L<line_number>: unknown instruction <opcode>, followed by a new line, and exit with the status EXIT_FAILURE<br>
   where is the line number where the instruction appears.<br>
   Line numbers always start at 1<br>
@@ -52,7 +71,7 @@ List of monty operations this interpreted understands:
 - `sub`: subtracts the top element of the stack from the second top element of the stack
 - `div`: divides the second top element of the stack by the top element of the stack
 - `mul`: multiples the second top element of the stack with the top element of the stack
-- `mod`: computes the rest of the division of the second top element of the stack by the top element of the stack 
+- `mod`: computes the rest of the division of the second top element of the stack by the top element of the stack
 - `pchar`: prints the char at the top of the stack, followed by a new line
 - `pstr`: prints the string starting at the top of the stack, followed by a new line
 - `rotr`:  rotates the stack to the bottom
@@ -71,8 +90,8 @@ File Name | Description :
 `_add.c` | opcode add the two tops elements of the stack
 `_sub.c` | opcode subtract the top element of the stack from the second top element of the stack
 `_div.c` | opcode divide the second top element of the stack by the top element of the stack
-`_mul.c` | opcode multiple the second top element of the stack with the top element of the stack 
-`_mod.c` | opcode compute the rest of the division of the second top element of the stack by the top element of the stack  
+`_mul.c` | opcode multiple the second top element of the stack with the top element of the stack
+`_mod.c` | opcode compute the rest of the division of the second top element of the stack by the top element of the stack
 `_pchar.c` | opcode print the char at the top of the stack, followed by a new line
 `_pstr.c` | opcode print the string starting at the top of the stack, followed by a new line
 `_rotr.c` | opcode rotate the stack to the bottom
@@ -82,7 +101,7 @@ File Name | Description :
     What do LIFO and FIFO mean?<br>
 
     FIFO stand for First In First Out
-  
+
     LIFO stand for Last In First Out
 ---
 **Requirements :**<br>
@@ -101,29 +120,30 @@ File Name | Description :
 
 ---
 ***Compilation & Output :***
- 
+
     typedef struct stack_s
         {
         int n;
         struct stack_s *prev;
         struct stack_s *next;
         } stack_t;
-   
+
 
     typedef struct instruction_s
         {
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
         } instruction_t;
-   
+
 
 ---
 ***Compilation & Output :***
 
-    Your code will be compiled this way : 
+    Your code will be compiled this way :
         $ gcc -Wall -Werror -Wextra -pedantic -std=c90 *.c -o monty
 
 ---
 
 
 
+### Authors C.Le Sauter - G.Coudrin - S.Badyine  for Holberton School Paris
