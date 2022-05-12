@@ -16,7 +16,7 @@
 * [modulo -computes the rest of the division](./_mod.c)
 * [multiplies the second element with the top elemen](./_mul.c)
 * [nop "do nothing"](./_nop.c)
-* [pop  delete the first node](./_pop.c)
+* [pop  deletes the first node](./_pop.c)
 * [pall prints all the list](./_pall.c)
 * [prints the value at the top of the stack](./_pint.c)
 * [prints string](./_pstr.c)
