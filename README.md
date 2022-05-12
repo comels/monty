@@ -53,7 +53,9 @@ This language was designed by David A. Watt. <br>
 - The monty program runs the bytecodes line by line and stop if either:<br>
   it executed properly every line of the file<br>
   it finds an error in the file an error occured<br>
+
 - If you can’t malloc anymore, print the error message Error: malloc failed, followed by a new line, and exit with status EXIT_FAILURE.<br>
+
 - You have to use malloc and free and are not allowed to use any other function from man malloc (realloc, calloc, …)<br>
 
 
