@@ -7,34 +7,19 @@
 
 void _rotl(stack_t **stack, unsigned int line_number)
 {
-	stack_t *temp;
-	stack_t *new;
-	int num = (*stack)->n;
+	stack_t *temp = *stack;
+	stack_t *last;
 
-	if (*stack == NULL)
-		return;
+	*stack = (*stack)->next;
+	(*stack)->prev = NULL;
 
-	_pop(stack, line_number);
+	last = *stack;
 
-	temp = *stack;
-
-	new = malloc(sizeof(stack_t));
-	if (new == NULL)
+	while (last->next)
 	{
-		return;
+		last = last->next;
 	}
-
-	new->n = num;
-	new->next = NULL;
-
-	if (*stack == NULL)
-	{
-		new->prev = NULL;
-		*stack = new;
-	}
-	while (temp->next)
-		temp = temp->next;
-
-	temp->next = new;
-	new->prev = temp;
+	last->next = temp;
+	temp->prev = last;
+	temp->next = NULL;
 }
