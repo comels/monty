@@ -16,6 +16,7 @@ int get_op_func(char *line, stack_t **stack, unsigned int line_number)
 		{"swap", _swap},
 		{"add", _add},
 		{"nop", _nop},
+		{"stack", _nop},
 		{"sub", _sub},
 		{"mul", _mul},
 		{"div", _div},
@@ -26,15 +27,8 @@ int get_op_func(char *line, stack_t **stack, unsigned int line_number)
 		{"rotr", _rotr},
 		{NULL, NULL},
 	};
-	int i = 0;
+	int i;
 
-	for (; line[i]; i++)
-	{
-		if (line[i] == ' ')
-			continue;
-		if (line[i] == '#')
-			return (EXIT_SUCCESS);
-	}
 	for (i = 0; func[i].opcode != NULL; i++)
 	{
 		if (strcmp(line, func[i].opcode) == 0)
