@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * _pop - function that deletes the first node
+ * _pop - function that deletes the first node of the list
  * @stack: the list
  * @line_number: number of line of the command
  */
